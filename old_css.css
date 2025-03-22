@@ -1,0 +1,130 @@
+
+/* 5. Style the links so that they have the same color even after they have been visited. This is a “challenge” problem. You should not give or receive help when completing it. */
+/* a:link, a:visited{
+    color: /*FIX*/
+/* a:visited{
+    color: inherit;
+} */
+
+
+/* 7. Edit the css for the card class to match our example. Achieve this by using a flex-property to specify an initial “size” of 450px.  
+You need to think about this from a “flex” perspective and realize that flex-direction will affect the size of the elements.  
+You can see that in the mobile view they all have the same width.  */
+/* .card{
+    flex-basis: 450px;
+} */
+
+/*8. Edit the css for the pricing class to match our example. You should use flex and the cards should be centered both horizontally and vertically.*/
+/* .pricing{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+} */
+
+/* 9. Style the images in the gallery class. These elements will have a solid 10px border with a color of #50C7C7, 10px margin on all four sides and a width of 300px.   */
+/* .gallery img{
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+} */
+
+/*10. Edit the css for the gallery class to use flex to match our example. 
+(You may want to look at the screen shots from 1200px and 1500px as well -  
+the changes are not from media queries, but from the use of flex.)*/
+/* .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:10px;
+} */
+
+
+/* 
+11. The following specifications are for when the screen-size is greater than 900px
+Observe the screenshot from 1200px
+
+Edit the css for the header tag (all instances) and the nav_links class
+# to match our example using flex-properties. The logo should be as far to
+ the left as possible and the links as far to the right as possible. 
+ Use flex properties, NOT position properties. */
+/* 
+ @media screen and (min-width: 900px) {
+    .card, .pricing{
+        flex-basis: 275px;
+    }
+
+   
+} 
+
+@media (prefers-reduced-motion){
+    .logo{
+        animation: none;
+    }
+} */
+
+
+/* 
+Change the font on your body to Arial with a backup value of  Helvetica
+
+
+The background image should be removed. 
+
+
+Edit the nav/nav_links elements so that they are spaced according to the image above.
+
+
+Edit the pricing class so that the elements align along the bottom.  As long as it aligns along the bottom we don't care if the cards aren't the same height.
+
+
+The card elements should have a solid border 2px of #45ADDD and use flex-basis of 325px. 
+
+
+No part of the gallery should be visible.
+
+
+Without using list-style-type add the thumbs up entity as shown in the cards. This is a challenge problem.
+ You should not give or receive help when completing it.**For some people the thumbs up is not printing as yellow. That is fine. */
+
+
+
+/* 
+@media print {
+    @page{
+        size: portrait;
+    }
+    
+    body{
+        background-image: none;
+        font-family: Arial, Helvetica;
+    }
+    
+    .nav_links{
+        justify-content: space-around;
+    }
+
+    
+    .card{
+        border: 2px solid #45ADDD;
+        flex-basis: 325px;
+    }
+
+    .pricing{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .gallery{
+        display: none;
+    }
+
+
+    .card::before {
+        content: "👍 ";
+        font-size: 20px;
+        display: inline-block;
+        margin-right: 5px;
+    }
+} */
+
+
